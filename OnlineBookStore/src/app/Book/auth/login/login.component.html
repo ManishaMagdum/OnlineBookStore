@@ -1,0 +1,41 @@
+<!-- <div class="">
+    <form>
+        <h1>Login</h1>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password">
+        </div>
+        <div>
+            
+            <input type="submit" id="submit">
+      </div>
+    </form>
+</div> -->
+<div  class="position-absolute top-50 start-50 translate-middle rounded-4 border-4 ">
+  <form (ngSubmit)="Submit()" class="p-4 rounded-lg border font-family" >
+    <h1 class="text-center fs-2 fw-bold">Login</h1>
+    <div class="mb-3 fs-3 row">
+      <label for="email" >Email</label>
+      <div class="col-sm-10">
+        <input type="text"  class="form-control" id="email" placeholder="Enter your Email address" [(ngModel)]="form.email" name="email" #email="ngModel" required>
+      </div>
+      <div *ngIf="email.invalid && (email.dirty||email.touched)" class="text-danger">Email Must be valid</div>
+    </div>
+    <div class="mb-3 fs-3 row">
+      <label for="inputPassword" >Password</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" id="inputPassword" [(ngModel)]="form.password" name="password" #password="ngModel" required>
+      </div>
+      <div *ngIf="password.invalid && (password.dirty||password.touched)" class="text-danger">Password must be valid</div>
+    </div>
+     
+      <div class="text-center fs-3 fw-bold mt-2 ">
+        <input type="submit" class=" bg-primary rounded-2 border-2 ">
+      </div>
+    
+  </form>
+</div>

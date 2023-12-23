@@ -1,0 +1,22 @@
+.nav{
+    display:flex;
+    flex-wrap: wrap;
+    padding: 4px;
+    background:  purple -900px;;
+    color:white;
+    height: 50px;
+}
+.cart{
+margin-left: 1500px;
+font-size: larger;
+
+
+}
+.book{
+   padding: 4px;
+}
+a{
+    font-size: larger;
+    font: bolder;
+    margin-left: 20px;
+}
